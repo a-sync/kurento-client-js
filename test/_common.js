@@ -19,7 +19,7 @@ var Docker = require('dockerode');
 var minimist = require('minimist');
 var spawn = require('child_process').spawn;
 
-URL_VIDEO_FILES = "http://files.kurento.org/video/";
+URL_VIDEO_FILES = "http://files.openvidu.io/video/";
 URL_BARCODES = URL_VIDEO_FILES + "filter/barcodes.webm";
 URL_FIWARECUT = URL_VIDEO_FILES + "filter/fiwarecut.webm";
 URL_PLATES = URL_VIDEO_FILES + "filter/plates.webm";
@@ -275,10 +275,7 @@ lifecycle = {
       getIpDocker(function (ip) {
         var hostIp = ip;
         console.log("Docker IP:", hostIp);
-        docker = new Docker({
-          host: hostIp,
-          port: 2375
-        });
+        docker = new Docker();
         docker.run('kurento/kurento-media-server-dev:latest', [], [
           process.stdout,
           process.stderr
