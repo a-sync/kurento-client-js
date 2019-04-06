@@ -15,6 +15,8 @@ for web applications and Node.js.
 
 The source code of this project can be cloned from the [GitHub repository].
 
+supports async-await out of the box
+
 Installation instructions
 -------------------------
 
@@ -28,7 +30,7 @@ instructions.
 Be sure to have installed [Node.js] in your system:
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
